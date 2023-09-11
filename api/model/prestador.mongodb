@@ -11,3 +11,16 @@ db.prestadores.insertOne({
         "coordinates" : [-23.2904, -47.2963]
     }
 })
+use('FatecItu')
+
+db.prestadores.insertOne({
+    "cnpj" : "452484232485",
+    "razao_social" : "Maria Clara Silva",
+    "cnae_sical" : 451522,
+    "nome_fantasia" : "Maria Boy",
+    "data_inicio_atividade" : "2020-08-01",
+    "localizacao" : {
+        "type" : "Point",
+        "coordinates" : [-23.2904, -47.2963]
+    }
+})

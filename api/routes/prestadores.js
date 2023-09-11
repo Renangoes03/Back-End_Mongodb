@@ -29,4 +29,23 @@ router.get('/',async(req,res) => {
         })
     }
 })
+
+/*
+ * GET   /API/PRESTADORES/ : ID
+ * LISTA DE TODOS OS PRESTADORES
+ */
+router.get('/id/:id', async(req, res ) =>{
+    try{
+        db.collection(nomeCollection).find({'_id' : {$eq: ObjectId(req.params.id)}})
+        .toArray((err, docs) => {
+            if(err){
+                res.status(400).json(err) //bad resquest
+            }else{
+                res.status(200).json(docs) //retorna documento
+            }
+     })
+    }catch (err){
+        res.status(500).json({"erro" : err.message})
+    }
+})
 export default router
