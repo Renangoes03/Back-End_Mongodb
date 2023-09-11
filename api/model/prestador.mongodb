@@ -1,0 +1,13 @@
+use('FatecItu')
+
+db.prestadores.insertOne({
+    "cnpj" : "452484232485",
+    "razao_social" : "Josué Alves Silva",
+    "cnae_sical" : "451510",
+    "nome_fantasia" : "Josué Boy",
+    "data_inicio_atividade" : "2020-08-01",
+    "localizacao" : {
+        "type" : "Point",
+        "coordinates" : [-23.2904, -47.2963]
+    }
+})
