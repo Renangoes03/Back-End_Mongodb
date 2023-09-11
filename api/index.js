@@ -15,7 +15,7 @@ app.use('/favicon.ico', express.static('public/images/hacker.png'))
 app.get('/api', (req, res) => {
     res.status(200).json({ //200 OK || 404 NOT FOUND
         message: 'API Fatec 100% funcional 🖐', //Mostrar que chegou na API 
-        version: '1.0.0'
+        version: '1.0.1'
     })
 })
 
