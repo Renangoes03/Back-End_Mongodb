@@ -1,0 +1,52 @@
+// Teste das requisições Rest dos prestadores
+
+@baseURL = http://localhost:4000/api/prestadores
+###
+//GET - lista todos os registros
+GET {{baseURL}}
+Content-Type: application/json
+###
+//GET - lista um registro pelo id
+GET {{baseURL}}/id/64ff30e6786107517addc90c
+###
+//DELETE - apaga um registro pelo id
+DELETE {{baseURL}}/64ff30e6786107517addc90c
+Content-Type: application/json
+
+
+###
+//POST - Insere um novo registro
+POST {{baseURL}}
+Content-Type: application/json
+
+    {
+    "cnpj" : "12312312312332",
+    "razao_social" : "MotoBoy Serice",
+    "cnae_fiscal" : 5624433,
+    "nome_fantasia" : "Moto Boy",
+    "data_inicio_atividade" : "2020-08-01",
+    "localizacao" : {
+        "type" : "Point",
+        "coordinates" : [-23.2904, -47.2963]
+    }
+}
+###
+//PUT - Altera o registro
+PUT {{baseURL}}
+Content-Type: application/json
+
+{
+    "_id": "64ff262774fd0e35b2de481e",
+    "cnpj": "45248423248512",
+    "razao_social": "Josué Alves Silva",
+    "cnae_fiscal": "451510",
+    "nome_fantasia": "Josué Boy",
+    "data_inicio_atividade": "2020-08-01",
+    "localizacao": {
+      "type": "Point",
+      "coordinates": [
+        -23.2904,
+        -47.2963
+      ]
+    }
+  }
