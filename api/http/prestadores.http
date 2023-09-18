@@ -7,7 +7,7 @@ GET {{baseURL}}
 Content-Type: application/json
 ###
 //GET - lista um registro pelo id
-GET {{baseURL}}/id/64ff30e6786107517addc90c
+GET {{baseURL}}/razao/Maria Boy
 ###
 //DELETE - apaga um registro pelo id
 DELETE {{baseURL}}/64ff30e6786107517addc90c
