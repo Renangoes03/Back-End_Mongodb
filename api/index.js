@@ -4,7 +4,7 @@ const app = express()
 const port = 4000 //poderia ser qualquer porta
 //import das rotas
 import rotasPrestadores from './routes/prestadores.js'
-
+import rotasUsuarios from './routes/usuarios.js'
 app.use(express.json()) //Irá fazer o parse de arquivos JSON 
 //Rotas de conteúdo público
 app.use('/', express.static('public')) //Oq tiver nessa pasta será apenas renderizado e não processado
@@ -12,7 +12,12 @@ app.use('/', express.static('public')) //Oq tiver nessa pasta será apenas rende
 //configura o favicon
 app.use('/favicon.ico', express.static('public/images/hacker.png'))
 
+
+//
 app.use('/api/prestadores',rotasPrestadores)
+app.use('/api/usuarios',rotasUsuarios)
+
+
 //Rotas da API
 app.get('/api', (req, res) => {
     res.status(200).json({ //200 OK || 404 NOT FOUND
