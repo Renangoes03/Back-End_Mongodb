@@ -1,0 +1,6 @@
+body{
+    background-image: url('../images/fundo.jpg');
+    background-size: cover; /*Cobre a área visivel*/
+    background-repeat: no-repeat;
+    background-position: center center;
+}
