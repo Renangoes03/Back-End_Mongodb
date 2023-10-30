@@ -1,20 +1,18 @@
-import { response } from "express"
-
 const urlBase = 'http://localhost:4000/api'
 
 //monitorando o submit do formulário
-documento.getElementBuId('loginForm').addEventListener('submit', function(event){
-    event.preventDefoult() //evita o recarregamento do form
+document.getElementById('loginForm').addEventListener('submit', function(event){
+    event.preventDefault() //evita o recarregamento do form
     //obtendo valores do form
     const login = document.getElementById('login').value 
-    const senha = dpcument.getElementBuId('senha').value
+    const senha = document.getElementById('senha').value
     //Criando o objeto para autenticar
     const dadosLogin = {
         email: login,
         senha: senha
     }
     //Efetuando o post para a API REST
-    fetch(`$${urlBase}/usuarios/login`,{
+    fetch(`${urlBase}/usuarios/login`,{
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
